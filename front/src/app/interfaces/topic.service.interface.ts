@@ -1,5 +1,5 @@
 import { Observable } from "rxjs"; // Importe la classe Observable depuis le module rxjs
-import { Topic } from "./topicInformation.interface"; // Importe l'interface Topic depuis le fichier topicInformation.interface
+import { Topic } from "src/app/interfaces/topicInformation.interface"; // Importe l'interface Topic depuis le fichier topicInformation.interface
 
 // Déclare une interface ITopicService qui définit un contrat pour les services de gestion des sujets
 export interface ITopicService {

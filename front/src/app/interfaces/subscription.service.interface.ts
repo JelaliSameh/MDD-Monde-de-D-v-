@@ -1,5 +1,5 @@
 import { Observable } from "rxjs"; // Importation de la classe Observable depuis RxJS
-import { SubscriptionActionResult } from "./subscriptionActionResult.interface";
+import { SubscriptionActionResult } from "src/app/interfaces/subscriptionActionResult.interface";
 
 // Interface ISubscriptionService définissant un contrat pour les services de souscription
 export interface ISubscriptionService {

@@ -1,6 +1,6 @@
 // Importe les dépendances nécessaires depuis Angular et les services locaux
 import { Router } from "@angular/router"; // Permet de manipuler la navigation
-import { SessionService } from "../services/session.service"; // Service pour gérer la session utilisateur
+import { SessionService } from "src/app/services/session.service"; // Service pour gérer la session utilisateur
 import { Injectable } from "@angular/core"; // Décorateur pour marquer une classe comme disponible pour être fournie et injectée comme dépendance
 
 // Marque la classe comme injectable avec une portée globale (singleton)

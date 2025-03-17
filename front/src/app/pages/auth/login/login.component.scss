@@ -1,0 +1,28 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centre verticalement */
+}
+
+mat-card {
+    width: 400px;
+    padding: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.full-width {
+    width: 100%; /* Remplace `fxFlex` */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

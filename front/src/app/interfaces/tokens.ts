@@ -1,6 +1,6 @@
 import { InjectionToken } from '@angular/core'; // Importe InjectionToken depuis le module @angular/core
-import { ITopicService } from './topic.service.interface'; // Importe l'interface ITopicService depuis le fichier topic.service.interface
-import { ISubscriptionService } from './subscription.service.interface'; // Importe l'interface ISubscriptionService depuis le fichier subscription.service.interface
+import { ITopicService } from 'src/app/interfaces/topic.service.interface'; // Importe l'interface ITopicService depuis le fichier topic.service.interface
+import { ISubscriptionService } from 'src/app/interfaces/subscription.service.interface'; // Importe l'interface ISubscriptionService depuis le fichier subscription.service.interface
 
 // Crée un token d'injection pour ITopicService, permettant l'injection de dépendances pour ce service
 export const ITopicServiceToken = new InjectionToken<ITopicService>('ITopicService');

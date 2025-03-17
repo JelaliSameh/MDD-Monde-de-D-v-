@@ -16,4 +16,5 @@ export class HomeComponent implements OnInit {
   // Cette méthode est un hook du cycle de vie d'un composant Angular, appelée juste après la création du composant
   // Ici, elle est vide car il n'y a pas de logique d'initialisation spécifique à exécuter au moment de la création du composant
   ngOnInit(): void {}
+  
 }

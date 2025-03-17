@@ -2,7 +2,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { SessionService } from './session.service';
+import { SessionService } from 'src/app/services/session.service';
 
 @Injectable({
     providedIn: 'root'

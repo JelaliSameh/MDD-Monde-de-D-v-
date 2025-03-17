@@ -1,11 +1,11 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { PostInformation } from '../interfaces/postInformation.interface';
-import { PostRequest } from '../interfaces/postRequest.interface';
+import { PostInformation } from 'src/app/interfaces/postInformation.interface';
+import { PostRequest } from 'src/app/interfaces/postRequest.interface';
 import { FormGroup } from '@angular/forms';
-import { SessionService } from './session.service';
-import { HttpService } from './http.service';
+import { SessionService } from 'src/app/services/session.service';
+import { HttpService } from 'src/app/services/http.service';
 
 @Injectable({
     providedIn: 'root'

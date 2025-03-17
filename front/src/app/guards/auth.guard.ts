@@ -4,8 +4,8 @@ import { Observable, Subject } from "rxjs";
 import { map, take, takeUntil } from "rxjs/operators";
 
 // Importe les services personnalisés pour la gestion de session et la redirection
-import { SessionService } from "../services/session.service";
-import { RedirectionService } from "../services/redirection.service";
+import { SessionService } from "src/app/services/session.service";
+import { RedirectionService } from "src/app/services/redirection.service";
 
 // Décore la classe avec @Injectable pour permettre son injection dans d'autres classes sans avoir besoin de l'instancier manuellement
 @Injectable({ providedIn: 'root' })

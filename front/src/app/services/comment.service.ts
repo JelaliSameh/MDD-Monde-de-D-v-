@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { CommentInformation } from '../interfaces/commentInformation.interface';
-import { HttpService } from './http.service';
+import { CommentInformation } from 'src/app/interfaces/commentInformation.interface';
+import { HttpService } from 'src/app/services/http.service';
 
 @Injectable({
     providedIn: 'root'

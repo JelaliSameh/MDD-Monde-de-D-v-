@@ -1,8 +1,8 @@
 // Importation des modules nécessaires depuis Angular et les services locaux
 import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { RegisterFormService } from '../services/register-form.service';
-import { AuthService } from '../services/auth.service';
+import { RegisterFormService } from 'src/app/pages/auth/services/register-form.service';
+import { AuthService } from 'src/app/pages/auth/services/auth.service';
 // Importation de l'interface pour la requête d'inscription
 import { RegisterRequest } from 'src/app/interfaces/registerRequest.interface';
 import { Subject } from 'rxjs';
@@ -33,15 +33,23 @@ export class RegisterComponent implements OnDestroy {
   // Méthode pour gérer la soumission du formulaire
   public submit(): void {
     // Récupération des valeurs du formulaire et casting en tant que RegisterRequest
+    console.log("Soumission du formulaire..."); // Vérifie si ça s'affiche
     const registerRequest = this.form.value as RegisterRequest;
+    console.log("Données envoyées :", registerRequest);
     // Appel du service d'authentification pour enregistrer un nouvel utilisateur
     this.authService.register(registerRequest)
       .pipe(takeUntil(this.destroy$)) // Utilisation de takeUntil pour désabonner
       .subscribe({
         // En cas de succès, redirection vers la page de connexion
-        next: (_: void) => this.router.navigate(['/login']),
+        next: (_: void) => {
+          console.log("Inscription réussie !");
+          this.router.navigate(['/login']);
+      },
         // En cas d'erreur, mise à jour de la propriété onError pour afficher un message d'erreur
-        error: _ => this.onError = true,
+        error: (error: any) => {
+          console.error("Erreur lors de l'inscription :", error);
+          this.onError = true;
+      }
       });
   }
 

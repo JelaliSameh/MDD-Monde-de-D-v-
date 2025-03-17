@@ -1,7 +1,7 @@
 // Importe les dépendances nécessaires pour créer un intercepteur HTTP dans une application Angular.
 import { HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable } from "@angular/core"; // Importe Injectable pour permettre l'injection de dépendances.
-import { AuthHeaderService } from "../services/auth-header.service"; // Importe le service AuthHeaderService pour gérer les en-têtes d'authentification.
+import { AuthHeaderService } from "src/app/services/auth-header.service"; // Importe le service AuthHeaderService pour gérer les en-têtes d'authentification.
 
 // Décore la classe avec @Injectable pour indiquer qu'elle peut être injectée comme dépendance dans d'autres classes.
 @Injectable({ providedIn: 'root' })
