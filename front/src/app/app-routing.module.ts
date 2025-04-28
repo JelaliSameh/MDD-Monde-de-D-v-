@@ -28,16 +28,9 @@ const WILDCARD_PATH = '**';
 const routes: Routes = [
   {
     path: '',
-    canActivate: [UnauthGuard],
-    resolve: { isLogged: SessionResolver },
-    component: HomeComponent
+       component: HomeComponent
   },
-  {
-    path: HOME_PATH,
-    canActivate: [UnauthGuard],
-    resolve: { isLogged: SessionResolver },
-    component: HomeComponent
-  },
+ 
   {
     path: LOGIN_PATH,
     canActivate: [UnauthGuard],

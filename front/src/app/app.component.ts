@@ -11,6 +11,9 @@ import { Location } from '@angular/common';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   isHomePage$: Observable<boolean>;
   isMePage: boolean = false;
   verticalMenuOpen = false;
@@ -23,7 +26,7 @@ export class AppComponent implements OnDestroy {
     private location: Location,
     private router: Router,
     private sessionService: SessionService) {
-      this.isHomePage$ = this.createHomePageObservable();
+      this.isHomePage$ = this.createHomePageObservable(); //creat
       this.subscribeToRouterEvents();
   }
 

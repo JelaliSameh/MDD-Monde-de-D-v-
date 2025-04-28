@@ -11,15 +11,18 @@
             <img src="/assets/logo_p6.png" alt="Logo de MDD APP" height="81" width="140">
             <span class="spacer"></span>
             <div class="HorizontalNav">
+                <a mat-button (click)="logout()" style="color: red;">Se déconnecter</a> 
                 <a mat-button routerLink="/articles">Articles</a>
                 <a mat-button routerLink="/themes">Thèmes</a>
                 <a routerLink="/me">
                     <mat-icon [class.mat-icon-me]="isMePage">account_circle</mat-icon>
                 </a>
             </div>
-            <div class="VerticalNav"  (click)="$event.stopPropagation()">
+            
+            <div class="VerticalNav" (click)="$event.stopPropagation()">
                 <mat-icon (click)="toggleVerticalMenu(); $event.stopPropagation()">menu</mat-icon>
                 <div class="verticalMenu" *ngIf="verticalMenuOpen">
+                    <a mat-button (click)="logout()" style="color: red;">Se déconnecter</a> <!-- Bouton rouge de déconnexion -->
                     <a mat-button routerLink="/articles" (click)="closeVerticalMenu()">Articles</a>
                     <a mat-button routerLink="/themes" (click)="closeVerticalMenu()">Thèmes</a>
                     <a routerLink="/me" (click)="closeVerticalMenu()">
@@ -27,6 +30,7 @@
                     </a>
                 </div>
             </div>
+            
         </mat-toolbar>
     </ng-template>
     <router-outlet></router-outlet>

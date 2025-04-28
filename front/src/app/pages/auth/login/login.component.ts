@@ -32,12 +32,14 @@ export class LoginComponent {
               private validationService: ValidationService) {} // Service de validation personnalisée
 
   // Méthode appelée lors de la soumission du formulaire
-  public submit(): void {
-    const loginRequest = this.form.value as LoginRequest; // Récupération des valeurs du formulaire et cast en LoginRequest
+  public submit(): void { 
+       const loginRequest = this.form.value as LoginRequest; // Récupération des valeurs du formulaire et cast en LoginRequest
     this.authService.login(loginRequest).subscribe({ // Appel du service d'authentification avec la requête de connexion
+
       next: (response: SessionInformation) => { // En cas de succès
+      
         this.sessionService.logIn(response); // Mise à jour de la session avec les informations de l'utilisateur
-        this.router.navigate(['/me']); // Redirection vers la page de profil de l'utilisateur
+          this.router.navigate(['/articles']);
       },
       error: (_: any) => this.onError = true,
       // En cas d'erreur, activation de l'affichage d'erreur
